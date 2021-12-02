@@ -2,7 +2,7 @@ from cv2.cv2 import VideoCapture, resize, cvtColor, COLOR_BGR2RGB
 from keras.models import load_model
 from numpy import array, expand_dims, vstack
 
-model = load_model('model_saved.h5')
+model = load_model('../model_saved.h5')
 cam = VideoCapture(0)
 runs_per = 0
 inp = ""

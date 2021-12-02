@@ -6,7 +6,7 @@ from os import listdir
 import os
 from random import choice
 
-model = load_model('model_saved.h5')
+model = load_model('../model_saved.h5')
 test_runs = 500
 correct = 0
 
