@@ -22,8 +22,9 @@ RPS_flask is a game of rock paper scissors vs a computer. The computer chooses r
    ```sh
    git clone https://github.com/shepherdm1/RPS_flask
    cd RPS_flask
-   ``` 
-3. Create a python virtual environment and activate it
+   ```
+3. On the last line of `app.py`, change `host='0.0.0.0'` to `host='127.0.0.1'`
+4. Create a python virtual environment and activate it
    
    ```python
    virtualenv rps
@@ -34,7 +35,7 @@ RPS_flask is a game of rock paper scissors vs a computer. The computer chooses r
    .\rps\Scripts\activate
    ```
    
-4. Install required dependencies and run app.py
+5. Install required dependencies and run app.py
    
    ```python
    pip install -r requirements.txt
