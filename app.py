@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from cv2 import imdecode, cvtColor, IMREAD_COLOR, COLOR_BGR2RGB
+from cv2 import imdecode, cvtColor, IMREAD_COLOR, COLOR_BGR2RGB, resize
 from keras.models import load_model
 from numpy import expand_dims, frombuffer, array, uint8
 from base64 import b64decode
@@ -50,6 +50,7 @@ def get_image():
     img_arr = frombuffer(img_bytes, dtype=uint8)
     img = imdecode(img_arr, flags=IMREAD_COLOR)  # change to grayscale if wanted
     img = cvtColor(array(img), COLOR_BGR2RGB)
+    img = resize((300, 200), img)
     img = img / 255
     condition = decide_winner(predict(img))
     return "You chose " + condition[0] + " and the computer chose " + condition[1] + " so you " + condition[2] + "."
