@@ -1,0 +1,2 @@
+LICENSE: CC-BY-SA 4.0
+CREDIT: Dataset taken from https://www.kaggle.com/drgfreeman/rockpaperscissors
