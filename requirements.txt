@@ -3,4 +3,3 @@ keras~=2.7.0
 numpy~=1.21.4
 opencv_python~=4.5.4.60
 tensorflow~=2.7.0
-waitress~=2.0.0
