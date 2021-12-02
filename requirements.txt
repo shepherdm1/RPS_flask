@@ -1,3 +1,5 @@
+wheel
+gunicorn
 Flask~=2.0.2
 keras~=2.7.0
 numpy~=1.21.4
