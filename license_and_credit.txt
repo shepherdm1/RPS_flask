@@ -1,2 +1,2 @@
-LICENSE: CC-BY-SA 4.0 found at https://creativecommons.org/licenses/by-sa/4.0/
+LICENSE: CC-BY-SA 4.0 found at https://creativecommons.org/licenses/by-sa/4.0
 CREDIT: Dataset is modified work by Julien de la Bruère-Terreault from https://www.kaggle.com/drgfreeman/rockpaperscissors
