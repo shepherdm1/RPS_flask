@@ -44,7 +44,10 @@ RPS_flask is a game of rock paper scissors vs a computer. The computer chooses r
    ```
 
 ## Advanced/Persistent Setup - Nginx with gUnicorn
-**This will create a persistent server accessable via your domain name and is intended for use as a "production" deployment**
+**This will create a persistent server accessable via your domain name and is intended for use as a "production" deployment**\
+
+**Note: This setup is linux-only due to the usage of systemd and gUnicorn**
+
 ### Part 1: Python and Initial Setup
 1. Make sure `Python3`, `pip`, `virtualenv`, and `nginx` are installed on your system before continuing
 2. Clone the repo and enter the directory it creates
