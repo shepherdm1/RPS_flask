@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -14,7 +15,7 @@ document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='
 #container {
         width: 600px;
         height: 400px;
-        border: 10px rgba(0, 0, 0, 100) solid;
+        
 }
 #videoElement {
         width: 600px;
@@ -22,7 +23,7 @@ document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='
         background-color: rgba(0, 0, 0, 100);
 }
   .button{
-          display: block;
+         
           background-color: #00a0fd; /* Blue */
           border: none;
           margin: 50px auto;
@@ -30,33 +31,31 @@ document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='
           padding:1rem 2rem;
           text-align: center;
           text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          margin-bottom:.5rem;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 54px;
           cursor:pointer;
           border-radius:6px;
 }
-#button{
-  position:relative;
-  display:flex;
-  flex-direction: column;
-  flex-wrap:wrap;
-  align-items: center;
-  text-align: center;
-  padding-left: 2px;
+#button_pad{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
 }
 
 </style>
 </head>
 
-<body>
+<body style="background-color: #b8b9bb;">
 <div id="container">
         <video autoplay="true" id="videoElement"></video>
-</div id="button">
-        <button onclick="capture()" class="button">"button_msg"</button>
-<div>
+</div>
+<div id="button_pad">
+        <button id = "btn" onclick="capture()" class="button">CAPTURE</button>
+</div>
 
-<p>Result: <span id="message"></span></p>
+<p style="font-family: Arial, Helvetica, sans-serif;font-size:42px;">
+      Result:<span id = "message" ></span>
+</p>
 
 <canvas id="c" width="300" height="200"></canvas>
 
@@ -75,7 +74,22 @@ document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='
         else {
                 document.getElementById('message').innerHTML = "you need a webcam to play"
         }
-        function capture() {
+        function wait(ms) {
+                return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                        console.log("Done waiting");
+                         resolve(ms)
+                 }, ms )
+                  })
+                  }  
+        async function capture() {
+                document.getElementById("btn").innerText = "ROCK!"
+                await wait(1000)
+                document.getElementById("btn").innerText = "PAPER!"
+                await wait(1000)
+                document.getElementById("btn").innerText = "SISSORS!"
+                await wait(1000)
+                document.getElementById("btn").innerText ="SHOOT!"
                 var canvas = document.getElementById('c');
         canvas.width = video.videoWidth;
                 canvas.height = video.videoHeight;
@@ -89,7 +103,10 @@ document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='
             success: function (res) { document.getElementById('message').innerHTML = res },
             error: function (error) { console.log(error) }
         })
+        await wait(1000)
+        document.getElementById("btn").innerText = "CAPTURE"
         }
+        
 </script>
 </body>
 </html>
