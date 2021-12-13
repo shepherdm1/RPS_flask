@@ -1,6 +1,4 @@
 <!-- ABOUT THE PROJECT -->
-## Final Report
-Please see 'DataSci Final.pdf'
 ## About The Project
 
 RPS_flask is a game of rock paper scissors vs a computer. The computer chooses random hand signs to play, but uses a Keras image classification model running on a flask server to recieve client pictures and determine which hand sign the user is showing the camera. Try it out at [CodeSmith.link](https://www.codesmith.link)!
@@ -151,6 +149,8 @@ Once your flask server is running, either in development mode through `python ap
 _or_
 
 
+## Final Report
+For full report, please see the [presentation PDF](DataSci%20Final.pdf).
 
 
 <!-- LICENSE -->
