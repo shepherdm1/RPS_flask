@@ -146,7 +146,7 @@ RPS_flask is a game of rock paper scissors vs a computer. The computer chooses r
 ## Usage
 
 Once your flask server is running, either in development mode through `python app.py` or on your server, simply 
-_or_
+visit the webpage by going to www.yourdomain or localhost and enjoy.
 
 
 ## Final Report
